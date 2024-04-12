@@ -36,8 +36,24 @@ export class TaskService {
     )
   }
 
+  readById(id: string | null): Observable<Task>{
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Task>(url).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  update(task: Task): Observable<Task> {
+    const url = `${this.baseUrl}/${task.id}`
+    return this.http.put<Task>(url, task).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
   errorHandler(e: any): Observable<any> {
-    this.showMessage('Ocorreu um erro!', true)
+    this.showMessage('Something went wrong!', true)
     return EMPTY
   }
 }

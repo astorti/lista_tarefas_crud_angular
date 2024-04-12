@@ -24,7 +24,7 @@ import { TaskService } from '../task.service';
           <ng-container matColumnDef="action" >
             <th mat-header-cell *matHeaderCellDef>Actions</th>
             <td mat-cell *matCellDef="let row">
-                <a routerLink="" class="edit">
+                <a routerLink="/tasks/update/{{row.id}}" class="edit">
                     <i class="material-icons ">
                         edit
                     </i>
