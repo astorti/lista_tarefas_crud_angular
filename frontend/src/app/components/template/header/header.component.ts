@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
             <i class="material-icons">home</i>
             <p>Home</p>
           </a>
-          <a mat-list-item routerLink="/">
+          <a mat-list-item routerLink="/tasks">
             <i class="material-icons">task</i>
             <p>Tasks</p>
           </a>

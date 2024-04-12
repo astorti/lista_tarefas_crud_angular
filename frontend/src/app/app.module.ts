@@ -8,20 +8,25 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { RedColorDirective } from './directives/red-color.directive';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { HomeComponent } from './views/home/home.component';
+import { MatCardModule } from '@angular/material/card';
+import { TaskListComponent } from './views/task-list/task-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    RedColorDirective
+    RedColorDirective,
+    HomeComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
