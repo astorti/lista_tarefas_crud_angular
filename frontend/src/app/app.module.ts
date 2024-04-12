@@ -14,7 +14,11 @@ import { TaskListComponent } from './views/task-list/task-list.component';
 import { ReadTaskComponent } from './components/task/read-task/read-task.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { CreateTaskComponent } from './components/task/create-task/create-task.component'
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http'
     RedColorDirective,
     HomeComponent,
     TaskListComponent,
-    ReadTaskComponent
+    ReadTaskComponent,
+    CreateTaskComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,10 @@ import { HttpClientModule } from '@angular/common/http'
     MatCardModule,
     MatTableModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

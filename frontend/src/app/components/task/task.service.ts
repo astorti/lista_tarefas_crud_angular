@@ -29,6 +29,13 @@ export class TaskService {
     )
   }
 
+  create(task: Task): Observable<Task> {
+    return this.http.post<Task>(this.baseUrl, task).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
   errorHandler(e: any): Observable<any> {
     this.showMessage('Ocorreu um erro!', true)
     return EMPTY
