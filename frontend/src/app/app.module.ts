@@ -11,6 +11,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeComponent } from './views/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { TaskListComponent } from './views/task-list/task-list.component';
+import { ReadTaskComponent } from './components/task/read-task/read-task.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -19,14 +23,18 @@ import { TaskListComponent } from './views/task-list/task-list.component';
     FooterComponent,
     RedColorDirective,
     HomeComponent,
-    TaskListComponent
+    TaskListComponent,
+    ReadTaskComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

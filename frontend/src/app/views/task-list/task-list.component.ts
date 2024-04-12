@@ -3,9 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-task-list',
   template: `
-    <p>
-      task-list works!
-    </p>
+    <app-read-task></app-read-task>
   `,
   styles: [
   ]
