@@ -29,7 +29,7 @@ import { TaskService } from '../task.service';
                         edit
                     </i>
                 </a>
-                <a routerLink="" class="delete">
+                <a routerLink="/tasks/delete/{{row.id}}" class="delete">
                     <i class="material-icons ">
                         delete
                     </i>

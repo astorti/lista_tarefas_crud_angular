@@ -52,6 +52,14 @@ export class TaskService {
     )
   }
 
+  delete(id: number | undefined): Observable<Task>{
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<Task>(url).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
   errorHandler(e: any): Observable<any> {
     this.showMessage('Something went wrong!', true)
     return EMPTY

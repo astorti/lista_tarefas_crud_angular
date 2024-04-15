@@ -21,6 +21,10 @@ import { Component } from '@angular/core';
       font-size: 30px
     }
 
+    .add i:active {
+      color: #424242
+    }
+
     .add a {
       text-decoration: none;
     }

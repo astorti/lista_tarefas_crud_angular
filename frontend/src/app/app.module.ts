@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { UpdateTaskComponent } from './components/task/update-task/update-task.component';
+import { DeleteTaskComponent } from './components/task/delete-task/delete-task.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { UpdateTaskComponent } from './components/task/update-task/update-task.c
     TaskListComponent,
     ReadTaskComponent,
     CreateTaskComponent,
-    UpdateTaskComponent
+    UpdateTaskComponent,
+    DeleteTaskComponent
   ],
   imports: [
     BrowserModule,
